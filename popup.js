@@ -13,8 +13,8 @@ browser.messages.query({unread: true}).then(function(msgs) {
 
   document.getElementById("folder").textContent =  "Folder: " + msgs.messages[maxId].folder.path;
   document.getElementById("subject").textContent =  "Subject: " + msgs.messages[maxId].subject;
-  document.getElementById("recipients").textContent =
-      "Recipients: " + msgs.messages[maxId].recipients.join("; ");
+  document.getElementById("author").textContent =
+      "Author: " + msgs.messages[maxId].author;
   document.getElementById("date").textContent =  "Date: " + msgs.messages[maxId].date.toDateString();
   document.getElementById("score").textContent =  "Score: " + mailDays[maxId];
 });
